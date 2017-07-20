@@ -1,2 +1,2 @@
 # extjs-todo-list
-Todo list on ExtJS
+Todo list on ExtJS 6
