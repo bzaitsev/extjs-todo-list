@@ -1,0 +1,115 @@
+$mainWidth: 470px;
+
+.todo-container {
+    width: $mainWidth;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(210, 210, 210, 0.1);
+
+    .x-dataview-item.x-view-item-focused {
+        outline: none !important;
+    }
+}
+
+.todo-items { 
+    width: 100%;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    border-top: 0;
+}
+
+.todo-footer {
+    padding: 5px 0;
+    border: 1px solid #d0d0d0;
+    border-top: 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
+
+    .x-btn.active {
+        border-color: #3892d4;
+        background-color: #ececec;
+    }     
+}
+
+.todo-item:hover {
+    .todo-remove-button {
+        visibility: visible;
+    }       
+}
+
+.todo-input {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+
+    .x-form-text {
+        padding: 5px 14px 4px;
+        font-size: 15px;
+    }
+}
+
+
+.todo-remove-button { 
+    visibility: hidden;
+    margin-left: auto;
+    padding: 0 5px;
+    border: 0;
+    font-size: 18px;
+    color: #cc9a9a;
+    background: transparent;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+        color: #af5b5e;
+    }
+}
+
+.todo-clear-button .x-btn-inner {
+    font: 300 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+}
+
+.todo-clear-button,
+.todo-clear-button.x-btn.x-btn-over,
+.todo-clear-button.x-btn.x-btn-focus {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+}
+
+.todo-clear-button:hover {
+    text-decoration: underline;
+}
+
+.todo-checkbox {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.todo-checkbox::before {
+    content: "\e614";
+    font: 16px/1 ExtJs;
+    color: #919191;
+}
+
+.todo-checkbox[checked]::before {
+    content: "\e613";
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 15px;
+    word-break: break-all;
+}
+
+.todo-checkbox[checked] + .todo-text {
+    text-decoration: line-through;
+    color: #d9d9dd;
+}
