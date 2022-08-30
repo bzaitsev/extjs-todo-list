@@ -24,10 +24,9 @@ Ext.define('MyApp.view.main.MainModel', {
     },
 
     data: {
-        name: 'ExtApp',  
+        name: 'ExtJS',  
         hasCompleted: false,
-        totalItems: 0, 
-        loremIpsum: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
+        totalItems: 0
     },
 
     formulas: {}

@@ -12,11 +12,8 @@ Ext.define('MyApp.view.main.Main', {
 
     requires: [
         'Ext.plugin.Viewport',
-        'Ext.window.MessageBox',
-
         'MyApp.view.main.MainController',
         'MyApp.view.main.MainModel',
-        'MyApp.view.main.List',
         'MyApp.store.Todo'
     ],
 
@@ -30,6 +27,7 @@ Ext.define('MyApp.view.main.Main', {
     tabRotation: 0,
 
     header: {
+      cls: 'main-header',
         layout: {
             align: 'stretchmax'
         },
@@ -38,8 +36,7 @@ Ext.define('MyApp.view.main.Main', {
                 text: '{name}'
             },
             flex: 0
-        },
-        // iconCls: 'fa-th-list'
+        }
     },
 
     tabBar: {
@@ -60,7 +57,7 @@ Ext.define('MyApp.view.main.Main', {
     },
 
     defaults: {
-        bodyPadding: 20,
+        scrollable: true,
         tabConfig: {
             plugins: 'responsive',
             responsiveConfig: {
@@ -71,7 +68,7 @@ Ext.define('MyApp.view.main.Main', {
                 tall: {
                     iconAlign: 'top',
                     textAlign: 'center',
-                    width: 120
+                    width: 130
                 }
             }
         }
@@ -79,12 +76,14 @@ Ext.define('MyApp.view.main.Main', {
 
     items: [{
         title: 'Todo list',
-        iconCls: 'fa-list',  
+        iconCls: 'fa-list',
+        cls: 'content',
         items: [{
             xtype: 'container',
             cls: 'todo-container',
             items: [{  
                 xtype: 'textfield',
+                height: 50,
                 cls: 'todo-input',
                 emptyText: 'What needs to be done?',
                 enableKeyEvents: true,
@@ -95,9 +94,6 @@ Ext.define('MyApp.view.main.Main', {
                 xtype: 'dataview',
                 cls: 'todo-items',
                 reference: 'dataview',
-                // store: {
-                //     type: 'todo'
-                // },
                 bind: {
                     store: '{todoStore}'
                 },
@@ -154,30 +150,5 @@ Ext.define('MyApp.view.main.Main', {
                 }]
             }]
         }]
-
-    }, {
-        title: 'Tab 2',
-        iconCls: 'fa-star-o',
-        // bind: {
-        //     html: '<h1>ExtJS 6</h1>' + '<p>application</p>'
-        // }
-        items: [{
-            xtype: 'container',
-            items: [{
-                view: 'menu.Menu'
-            }]
-        }]
-    }/*, {
-        title: 'Tab 3',
-        iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Tab 4',
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }*/]
+    }]
 });

@@ -1,9 +1,7 @@
 Ext.define('MyApp.store.Todo', {
 	extend: 'Ext.data.Store',
 	alias: 'store.todo',
-	
-	// storeId: 'todo1',
-	
+		
 	fields: [
 		{name: 'id'},
 		{name: 'text'},

@@ -113,13 +113,10 @@ Ext.define('MyApp.view.main.MainController', {
         viewmodel.set('totalItems', ++totalItems);
     }, 
 
-    onStoreAdd: function(store) { // ( store , records , index , eOpts ) 
-    },
+    onStoreAdd: function(store) {},
+    onStoreRemove: function(store, records) {},
 
-    onStoreRemove: function(store, records) { // ( store , records , index , isMove , eOpts ) 
-    },
-
-    onStoreUpdate: function(store, record) { // ( this , record , operation , modifiedFieldNames , details , eOpts ) 
+    onStoreUpdate: function(store, record) {
         var viewmodel = this.getViewModel();
         var hasCompleted = store.query('completed', true).length ? true : false;
 
