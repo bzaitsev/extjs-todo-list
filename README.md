@@ -15,6 +15,6 @@ To make build:
 sencha app build
 ```
 
-Links:
+## Links:
 - [ExtJS Docs](https://docs.sencha.com/extjs/6.5.2/)
 - [ExtJS Examples](https://examples.sencha.com/extjs/6.5.3/examples/kitchensink/?classic#components)
