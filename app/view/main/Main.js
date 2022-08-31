@@ -119,6 +119,7 @@ Ext.define('MyApp.view.main.Main', {
                 items: [{ 
                     xtype: 'toolbar',
                     width: '100%',
+                    scrollable: true,
                     defaults: {
                         listeners: {
                             click: 'onTodoFilterClick'
